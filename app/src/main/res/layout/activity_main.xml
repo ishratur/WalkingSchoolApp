@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/testimg2"
+    android:id="@+id/main_activity"
+    tools:context="ca.cmpt276.walkinggroup.app.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="204dp"
+        android:layout_height="465dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mailImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/permissionBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/permission"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addUsers"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/AddUserBtnText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mapBtn"
+                app:layout_constraintEnd_toStartOf="@+id/mailImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+            <Button
+                android:id="@+id/mapBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/btn_view_groups"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/getUsersBtn"
+                app:layout_constraintEnd_toStartOf="@+id/mailImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addUsers" />
+
+            <Button
+                android:id="@+id/getUsersBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/MonitorListBtn"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/getMonitorByBtn"
+                app:layout_constraintEnd_toEndOf="@+id/getMonitorByBtn"
+                app:layout_constraintStart_toStartOf="@+id/getMonitorByBtn"
+                app:layout_constraintTop_toBottomOf="@+id/mapBtn" />
+
+            <Button
+                android:id="@+id/getMonitorByBtn"
+                android:layout_width="200dp"
+                android:layout_height="58dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/MonitorByBtnList"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/btn_create_group"
+                app:layout_constraintEnd_toEndOf="@+id/btn_create_group"
+                app:layout_constraintStart_toStartOf="@+id/btn_create_group"
+                app:layout_constraintTop_toBottomOf="@+id/getUsersBtn" />
+
+            <Button
+                android:id="@+id/btn_create_group"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/btn_create_new_group"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/parentDashBtn"
+                app:layout_constraintEnd_toEndOf="@+id/parentDashBtn"
+                app:layout_constraintStart_toStartOf="@+id/parentDashBtn"
+                app:layout_constraintTop_toBottomOf="@+id/getMonitorByBtn" />
+
+            <Button
+                android:id="@+id/parentDashBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:text="@string/btn_open_dashboard"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mapBtn"
+                app:layout_constraintStart_toStartOf="@+id/mapBtn"
+                app:layout_constraintTop_toBottomOf="@+id/btn_create_group" />
+
+            <Button
+                android:id="@+id/btn_view_rewards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_reward_points"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="casual"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mapBtn"
+                app:layout_constraintStart_toStartOf="@+id/mapBtn"
+                app:layout_constraintTop_toBottomOf="@+id/parentDashBtn"/>
+
+            <Button
+                android:id="@+id/panicBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/panic_button_style"
+                android:fontFamily="casual"
+                android:text="@string/panic_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/parentDashBtn"
+                app:layout_constraintStart_toStartOf="@id/parentDashBtn"
+                app:layout_constraintTop_toBottomOf="@+id/parentDashBtn"
+                app:layout_constraintVertical_bias="0.984" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="24sp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView4"
+        app:layout_constraintStart_toEndOf="@+id/scrollView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mailImage"
+        android:layout_width="115dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="153dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/mail" />
+
+
+</android.support.constraint.ConstraintLayout>
